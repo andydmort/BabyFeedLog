@@ -1,0 +1,23 @@
+<svg>
+    <defs>
+        <link rel="stylesheet" href="main-style.css" />
+        <link rel="import" href="/mnt/sysassets/widgets/text_button.defs" />
+        <symbol id="main-screen">
+            <rect id="background">
+                <use 
+                    id="btn-left" 
+                    href="#text-button" 
+                    class="text-button top left application-fill" />
+                <use 
+                    id="btn-right" 
+                    href="#text-button" 
+                    class="text-button top right application-fill" 
+                />
+                <use 
+                    id="btn-history" 
+                    href="#text-button" 
+                    class="text-button bottom application-fill" />
+            </rect>
+        </symbol>
+    </defs>
+</svg>

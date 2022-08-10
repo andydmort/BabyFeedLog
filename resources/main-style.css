@@ -1,0 +1,28 @@
+.defaultText {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 32;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  fill: black;
+}
+
+.application-fill { fill: fb-aqua; }
+.foreground-fill { fill: fb-blue; }
+.background-fill { fill: fb-black; }
+
+#btn-left #text {
+  text-buffer: "LEFT";
+}
+
+#btn-right #text {
+  text-buffer: "RIGHT";
+}
+
+#btn-history #text {
+  text-buffer: "HISTORY";
+}
