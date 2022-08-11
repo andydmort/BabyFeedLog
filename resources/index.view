@@ -1,6 +1,10 @@
 <svg>
   <use 
-    id="theMainScreen"
+    id="the-main-screen"
     href="#main-screen" 
+  />
+  <use 
+    id="the-history-screen" 
+    href="#history-screen"
   />
 </svg>

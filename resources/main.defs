@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="main-style.css" />
         <link rel="import" href="/mnt/sysassets/widgets/text_button.defs" />
         <symbol id="main-screen">
-            <rect id="background">
+            <rect id="main-screen__rect">
                 <use 
                     id="btn-left" 
                     href="#text-button" 

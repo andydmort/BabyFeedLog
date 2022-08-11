@@ -1,0 +1,9 @@
+<svg>
+    <defs>
+        <link rel="stylesheet" href="history-style.css" />
+        <symbol id="history-screen">
+            <rect id="history-screen__rect">
+            </rect>
+        </symbol>
+    </defs>
+</svg>
