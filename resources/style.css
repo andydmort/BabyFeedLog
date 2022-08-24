@@ -1,3 +1,6 @@
 #the-main-screen{
+    /* display: none; */
+}
+#the-history-screen{
     display: none;
 }
