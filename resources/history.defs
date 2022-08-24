@@ -4,6 +4,7 @@
         <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.defs" />
         <link rel="import" href="/mnt/sysassets/widgets/scrollbar.defs" />
         <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.defs" />
+        <link rel="import" href="/mnt/sysassets/widgets/icon_button.defs" />
         <!-- item  -->
         <symbol id="history-screen__item" href="#tile-list-item" class="history-screen__item">
             <text id="text" class="history-screen__item-text" />
@@ -58,7 +59,13 @@
 
                     <use href="#history-screen__footer">
                     </use>
+                    
                 </use>
+                <use 
+                    id="history-screen__rtn-btn" 
+                    href="#icon-button" 
+                    class="small-button history-screen__rtn-btn--color history-screen__rtn-btn--image plus-button" 
+                />
             </rect>
         </symbol>
     </defs>

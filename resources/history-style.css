@@ -33,3 +33,15 @@
   fill: #222222;
   y: 100%-2;
 }
+
+
+.history-screen__rtn-btn--color { fill: fb-orange; }
+
+#history-screen__rtn-btn {
+  x: 100%-75;
+  y: 100%-45;
+}
+
+.history-screen__rtn-btn--image #image {
+  href: "arrow-left-solid-black.png";
+}
