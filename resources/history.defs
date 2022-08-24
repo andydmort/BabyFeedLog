@@ -1,8 +1,64 @@
 <svg>
     <defs>
         <link rel="stylesheet" href="history-style.css" />
+        <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.defs" />
+        <link rel="import" href="/mnt/sysassets/widgets/scrollbar.defs" />
+        <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.defs" />
+        <!-- item  -->
+        <symbol id="history-screen__item" href="#tile-list-item" class="history-screen__item">
+            <text id="text" class="history-screen__item-text" />
+            <rect class="history-screen__line" />
+        </symbol>
+
+        <!-- header -->
+        <symbol id="history-screen__header" href="#tile-list-header" class="history-screen__header">
+        </symbol>
+
+        <!-- footer -->
+        <symbol id="history-screen__footer" href="#tile-list-footer" class="history-screen__footer">
+        </symbol>
+
+        <!-- History Screen -->
         <symbol id="history-screen">
             <rect id="history-screen__rect">
+                <use href="#tile-list" id="history-screen__list">
+                    <use href="#history-screen__header">
+                    </use>
+
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="04/24/2022 01:30 PM Left" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="04/24/2022 12:34 AM Right" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 3" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 4" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 5" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 6" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 7" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 8" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="Text Item 9" />
+                    </use>
+                    <use href="#history-screen__item">
+                        <set href="#text" attributeName="text-buffer" to="04/24/2022 12:34 AM Right" />
+                    </use>
+
+                    <use href="#history-screen__footer">
+                    </use>
+                </use>
             </rect>
         </symbol>
     </defs>
