@@ -2,6 +2,7 @@ console.log('Hello world!');
 
 import * as document from "document";
 import { FileIOFitbit } from "./FileIO";
+import { ScreenHistory } from "./ScreenHistory";
 
 // Btn Handlers
 const btnLeft = document.getElementById("btn-left");
@@ -16,9 +17,11 @@ const btnHistory = document.getElementById("btn-history");
 btnHistory.addEventListener("click", (evt) => {
   console.log("History CLICKED");
 });
-const btnRtn = document.getElementById("history-screen__rtn-btn");
-btnRtn.addEventListener("click", (evt) => {
-  console.log("Return CLICKED");
+
+const screenHistory = new ScreenHistory({
+  btnRtnClickHandler: (evt)=>{
+    console.log("Return CLICKED");
+  }
 });
 
 
