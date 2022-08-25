@@ -3,27 +3,34 @@ console.log('Hello world!');
 import * as document from "document";
 import { FileIOFitbit } from "./FileIO";
 import { ScreenHistory } from "./ScreenHistory";
+import { ScreenMain } from "./ScreenMain";
 
-// Btn Handlers
-const btnLeft = document.getElementById("btn-left");
-btnLeft.addEventListener("click", (evt) => {
-  console.log("Left CLICKED");
-});
-const btnRight = document.getElementById("btn-right");
-btnRight.addEventListener("click", (evt) => {
-  console.log("Right CLICKED");
-});
-const btnHistory = document.getElementById("btn-history");
-btnHistory.addEventListener("click", (evt) => {
-  console.log("History CLICKED");
+let screenMain;
+let screenHistory;
+
+screenMain = new ScreenMain({
+  btnLeftHandler: (evt)=>{
+    console.log("LEFT clicked");
+  },
+  btnRightHandler: (evt)=>{
+    console.log("RIGHT clicked");
+  },
+  btnHistHandler: (evt)=>{
+    console.log("HISTORY clicked");
+    screenMain.hide();
+    screenHistory.show();
+  } 
 });
 
-const screenHistory = new ScreenHistory({
+screenHistory = new ScreenHistory({
   btnRtnClickHandler: (evt)=>{
-    console.log("Return CLICKED");
+    screenHistory.hide();
+    console.log("RETURN clicked");
+    screenMain.show();
   }
 });
 
+screenMain.show();
 
 const fileIO = new FileIOFitbit({ encoding: 'json' });
 
