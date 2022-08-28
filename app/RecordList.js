@@ -13,7 +13,14 @@ export class RecordList{
         this.onRecord = onRecord;
         this.max = recordMax;
         this.io = fileIoInterface;
-        this.records = this.io.read();
+        try{
+            this.records = this.io.read();
+        }
+        catch(err){
+            console.error(err);
+            console.log("Setting records to []");
+            this.records = [];
+        }
         // Records need to be an array
         if(!Array.isArray(this.records))
             this.records = [];

@@ -1,7 +1,6 @@
 import { FileIOFitbit } from "./FileIO";
 import { ScreenHistory } from "./ScreenHistory";
 import { ScreenMain } from "./ScreenMain";
-import * as DateHelpers from "./DateHelpers.js";
 import { RecordList } from "./RecordList";
 
 let screenMain;
