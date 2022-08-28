@@ -23,6 +23,8 @@
         <symbol id="history-screen">
             <rect id="history-screen__rect">
                 <use href="#tile-list" id="history-screen__list">
+                    <var id="reorder-enabled" value="0"/>
+
                     <use href="#history-screen__header">
                     </use>
 
