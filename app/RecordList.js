@@ -14,6 +14,9 @@ export class RecordList{
         this.max = recordMax;
         this.io = fileIoInterface;
         this.records = this.io.read();
+        // Records need to be an array
+        if(!Array.isArray(this.records))
+            this.records = [];
     }
 
     /**
@@ -24,9 +27,10 @@ export class RecordList{
     addRecord(side, date){
         // add record to record
         const record = {side, date: DateToJson(date)};
+        console.log(`records ${JSON.stringify(this.records)}`);
         this.records.unshift(record);
         // remove any extra records
-        while(this.records.length > this.max){
+        while(this.records.length >= this.max){
             this.records.pop();
         }
         // Alert the UI.
@@ -34,4 +38,11 @@ export class RecordList{
         // Reset the store
         this.io.write(this.records);
     } 
+
+    /**
+     * @returns {object[]} Returns the list of records.
+     */
+    getRecords(){
+        return this.records;
+    }
 }

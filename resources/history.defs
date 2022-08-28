@@ -28,35 +28,25 @@
                     <use href="#history-screen__header">
                     </use>
 
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="04/24/2022 01:30 PM Left" />
+                    <use href="#history-screen__item" id="history-screen__item[0]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="04/24/2022 12:34 AM Right" />
+                    <use href="#history-screen__item" id="history-screen__item[1]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 3" />
+                    <use href="#history-screen__item" id="history-screen__item[2]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 4" />
+                    <use href="#history-screen__item" id="history-screen__item[3]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 5" />
+                    <use href="#history-screen__item" id="history-screen__item[4]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 6" />
+                    <use href="#history-screen__item" id="history-screen__item[5]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 7" />
+                    <use href="#history-screen__item" id="history-screen__item[6]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 8" />
+                    <use href="#history-screen__item" id="history-screen__item[7]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="Text Item 9" />
+                    <use href="#history-screen__item" id="history-screen__item[8]">
                     </use>
-                    <use href="#history-screen__item">
-                        <set href="#text" attributeName="text-buffer" to="04/24/2022 12:34 AM Right" />
+                    <use href="#history-screen__item" id="history-screen__item[9]">
                     </use>
 
                     <use href="#history-screen__footer">
