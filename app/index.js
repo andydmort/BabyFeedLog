@@ -4,9 +4,17 @@ import * as document from "document";
 import { FileIOFitbit } from "./FileIO";
 import { ScreenHistory } from "./ScreenHistory";
 import { ScreenMain } from "./ScreenMain";
+import * as DateHelpers from "./DateHelpers.js";
 
 let screenMain;
 let screenHistory;
+
+let date = new Date();
+
+console.log(`Date to Json ${DateHelpers.DateToJson(date)}`);
+console.log(`Date from Json ${DateHelpers.DateFromJson(DateHelpers.DateToJson(date))}`);
+console.log(`Date formated ${DateHelpers.FormatDate(date)}`);
+
 
 screenMain = new ScreenMain({
   btnLeftHandler: (evt)=>{
