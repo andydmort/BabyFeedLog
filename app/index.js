@@ -1,6 +1,3 @@
-console.log('Hello world!');
-
-import * as document from "document";
 import { FileIOFitbit } from "./FileIO";
 import { ScreenHistory } from "./ScreenHistory";
 import { ScreenMain } from "./ScreenMain";
@@ -15,7 +12,7 @@ const recordList = new RecordList({
   fileIoInterface: fileIO, 
   onRecord: (records)=>{
     screenHistory.setHistoryUI(records);
-    // TODO: set the main screen item.
+    screenMain.setMainUi(records[0]);
   }
 });
 // Create the screens
@@ -41,14 +38,11 @@ screenHistory = new ScreenHistory({
     screenMain.show();
   }
 });
+let startingRecords = recordList.getRecords();
+console.log(`Starting Records: ${JSON.stringify(startingRecords)}`);
 console.log("Setting previous history");
-screenHistory.setHistoryUI(recordList.getRecords());
+screenHistory.setHistoryUI(startingRecords);
+console.log("Setting Main screen text");
+screenMain.setMainUi(startingRecords[0]);
 console.log("Showing main screen");
 screenMain.show();
-
-
-
-
-fileIO.write({one: "two"});
-
-console.log(`read out of file: ${JSON.stringify(fileIO.read())}`);

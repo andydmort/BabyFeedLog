@@ -1,4 +1,5 @@
 import * as document from "document";
+import { DateFromJson, FormatDate } from "./DateHelpers";
 import { Screen } from "./Screen";
 
 export class ScreenMain extends Screen {
@@ -10,6 +11,8 @@ export class ScreenMain extends Screen {
         btnRightHandler = undefined,
         btnHistId = "btn-history",
         btnHistHandler = undefined,
+        sideTextId = 'main-screen__center-side-text',
+        dateTextId = 'main-screen__center-date-text',
         hide = true
     }){
         super(id, hide);
@@ -22,5 +25,17 @@ export class ScreenMain extends Screen {
         // Right button
         this.btnHist = document.getElementById(btnHistId)
         this.setBtnHandler(this.btnHist, btnHistHandler);
+        // Side text
+        this.sideText = document.getElementById(sideTextId);
+        // Date text
+        this.dateText = document.getElementById(dateTextId);
+    }
+
+    setMainUi(record){
+        if(record)
+        {
+            this.dateText.text = FormatDate(DateFromJson(record.date));
+            this.sideText.text = record.side;
+        }
     }
 }

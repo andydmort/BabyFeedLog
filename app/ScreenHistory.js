@@ -7,12 +7,14 @@ export class ScreenHistory extends Screen {
         id='history-screen__rect', 
         btnRtnId = 'history-screen__rtn-btn',
         btnRtnClickHandler = undefined,
-        hide = true
+        hide = true,
+        recordUiId = 'history-screen__item'
     }){
         super(id, hide);
         // Return button
         this.btnRtn = document.getElementById(btnRtnId);
         this.setBtnHandler(this.btnRtn, btnRtnClickHandler);
+        this.recordUiId = recordUiId;
     };
 
     setHistoryUI(records){
@@ -20,7 +22,7 @@ export class ScreenHistory extends Screen {
             const record = records[idx];
             const side = record.side;
             const date = DateFromJson(record.date);
-            let uiItem = document.getElementById(`history-screen__item[${idx}]`);
+            let uiItem = document.getElementById(`${this.recordUiId}[${idx}]`);
             uiItem.text = `${FormatDate(date)} | ${side}`;
         }    
     }
