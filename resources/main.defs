@@ -13,6 +13,14 @@
                     href="#text-button" 
                     class="text-button top right application-fill" 
                 />
+                <text
+                    id="main-screen__center-date-text" 
+                >
+                </text>
+                <text
+                    id="main-screen__center-side-text" 
+                >
+                </text>
                 <use 
                     id="btn-history" 
                     href="#text-button" 
