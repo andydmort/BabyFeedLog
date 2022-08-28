@@ -30,7 +30,7 @@ export class RecordList{
         console.log(`records ${JSON.stringify(this.records)}`);
         this.records.unshift(record);
         // remove any extra records
-        while(this.records.length >= this.max){
+        while(this.records.length > this.max){
             this.records.pop();
         }
         // Alert the UI.

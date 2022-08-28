@@ -21,7 +21,7 @@ export class ScreenHistory extends Screen {
             const side = record.side;
             const date = DateFromJson(record.date);
             let uiItem = document.getElementById(`history-screen__item[${idx}]`);
-            uiItem.text = `${side} ${FormatDate(date)}`;
+            uiItem.text = `${FormatDate(date)} | ${side}`;
         }    
     }
 
