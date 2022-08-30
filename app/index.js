@@ -2,13 +2,14 @@ import { FileIOFitbit } from "./FileIO";
 import { ScreenHistory } from "./ScreenHistory";
 import { ScreenMain } from "./ScreenMain";
 import { RecordList } from "./RecordList";
-
+const NUMBER_HISTORY_ITEMS = 100;
 let screenMain;
 let screenHistory;
 // Create the RecordList
 const fileIO = new FileIOFitbit({ encoding: 'json' });
 const recordList = new RecordList({
   fileIoInterface: fileIO, 
+  recordMax: NUMBER_HISTORY_ITEMS,
   onRecord: (records)=>{
     screenHistory.setHistoryUI(records);
     screenMain.setMainUi(records[0]);
@@ -31,6 +32,7 @@ screenMain = new ScreenMain({
   } 
 });
 screenHistory = new ScreenHistory({
+  numRecordItems: NUMBER_HISTORY_ITEMS,
   btnRtnClickHandler: (evt)=>{
     screenHistory.hide();
     console.log("RETURN clicked");
