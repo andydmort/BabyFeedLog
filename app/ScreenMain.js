@@ -2,7 +2,27 @@ import * as document from "document";
 import { DateFromJson, FormatDate } from "./DateHelpers";
 import { Screen } from "./Screen";
 
+/**
+ * Main screen controller
+ */
 export class ScreenMain extends Screen {
+    /**
+     * Constuctor
+     * @param {Object} options 
+     * @param {Object} options.id Specifies the main screen rect id.
+     * @param {Object} options.btnLeftId Specifies the left button id.
+     * @param {Object} options.btnLeftHandler Specifies the action to take when the left button is 
+     * clicked.
+     * @param {Object} options.btnRightId Specifies the right button id.
+     * @param {Object} options.btnRightHandler Specifies the action to take when the right button
+     * is clicked.
+     * @param {Object} options.btnHistId Specifies the history button id.
+     * @param {Object} options.btnHistHandler Specifies the action taken when the history button 
+     * is clicked.
+     * @param {Object} options.sideTextId Specifies the id of the side text element.
+     * @param {Object} options.dataTextId Specifies the id fo the data text element..
+     * @param {Object} options.hide Specifies if the screen should start hidden.
+     */
     constructor({
         id="main-screen__rect",
         btnLeftId="btn-left",
@@ -31,6 +51,10 @@ export class ScreenMain extends Screen {
         this.dateText = document.getElementById(dateTextId);
     }
 
+    /**
+     * Alters the Main screen ui according to a record.
+     * @param {{side: string, date: Date}} record Specifies a record to display.
+     */
     setMainUi(record){
         if(record)
         {

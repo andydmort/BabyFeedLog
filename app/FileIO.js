@@ -25,11 +25,19 @@ export class FileIOFitbit extends FileIOInterface{
         this.encoding = encoding;
     }
 
-    
+    /**
+     * Reads the data.
+     * @returns {String || Object} Return the written data. The data's type depends on the set 
+     * encoding.
+     */
     read(){
         return fs.readFileSync(this.fileName, this.encoding);
     }
-
+    /**
+     * Write out the data.
+     * @param {String || Object} data Specifies the data to be written. It should be in a form 
+     * that matched the set encoding.
+     */
     write(data){
         fs.writeFileSync(this.fileName, data ,this.encoding);  
     }

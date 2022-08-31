@@ -1,5 +1,8 @@
 import { DateToJson } from "./DateHelpers";
 
+/**
+ * An ordered list of records.
+ */
 export class RecordList{
     /**
      * @param {object} options Specifies the options. 
