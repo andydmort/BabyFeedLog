@@ -37,7 +37,6 @@ export class RecordList{
     addRecord(side, date){
         // add record to record
         const record = {side, date: DateToJson(date)};
-        console.log(`records ${JSON.stringify(this.records)}`);
         this.records.unshift(record);
         // remove any extra records
         while(this.records.length > this.max){

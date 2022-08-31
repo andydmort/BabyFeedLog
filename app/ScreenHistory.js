@@ -41,7 +41,6 @@ export class ScreenHistory extends Screen {
     setHistoryUI(records){
         for(let idx = 0; idx < this.numRecordItems; idx++){
             const uiItemId = `${this.recordUiId}[${idx}]`;
-            console.log(`uiItemId: ${uiItemId}`);
             const uiItem = document.getElementById(uiItemId);
             const record = records[idx];
             if(record){
