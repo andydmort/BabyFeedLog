@@ -1,6 +1,6 @@
 {
   "name": "baby-feed-2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "license": "MIT",
   "devDependencies": {
@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "bb9a791c-7e02-417f-a17d-3f2775ef46eb",
     "appType": "app",
-    "appDisplayName": "Baby Feed Tracker",
+    "appDisplayName": "Feed Log",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
